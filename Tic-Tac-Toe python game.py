@@ -3,7 +3,7 @@
 # Players take turns to write their numbers. Odd numbers start. Use each number only once.
 # The first person to complete a line that adds up to 15 is the winner.
 
-# Author:Zyad Mohamed Ahmed Abdelzaher (20230159) 
+# Author:Zyad Mohamed Ahmed Abdelzaher 
 # Version:1.0
 # Date:2/28/2024
 
