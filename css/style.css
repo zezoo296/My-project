@@ -220,6 +220,9 @@ a{
   .main .box .text{
     width: 100%;
   }
+   .main .box::after{
+    right: 20px;
+  }
 }
 
 .main .box h2{
