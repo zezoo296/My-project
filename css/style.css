@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+  --main-color: #19c8fa;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+  color: inherit;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.container{
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
+
+.main{
+  height: 100vh;
+  background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.main .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 60%);
+}
+
+.main header .container{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  right: 0;
+  z-index: 2;
+}
+
+.main header .container::after{
+  content: "";
+  width: calc(100% - 30px);
+  border-bottom: 1px solid #a2a2a2;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+.main header .container nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main header .container img{
+  height: 40px;
+}
+
+.main header .container img:hover{
+  cursor: pointer;
+}
+
+.main header .toggle-menu{
+  color: white;
+  font-size: 24px;
+}
+
+@media (min-width:768px)
+{
+  .main header .container nav .toggle-menu{
+    display: none;
+  }
+}
+
+.main header .container ul{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width:768px) {
+  .main header .container ul{
+    display: none;
+  }
+  header nav .toggle-menu:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+  }
+  header nav .toggle-menu:hover + ul li{
+    padding:15px;
+    background-color: rgba(0, 0, 0, 0.627);
+  }
+}
+
+.main header .container ul li {
+  color: white;
+  font-size: 14px;
+  padding: 41.5px 10px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 3;
+}
+
+.main header .container ul li:hover{
+  cursor: pointer;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+
+.main header .container nav .search{
+    margin-left: 20px;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    border-left: 1px solid white;
+}
+
+.main header .container nav .search i{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.main .box{
+  background-color: #146377bb;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.main .box::before,
+.main .box::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border: 5px solid transparent;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.main .box::before{
+  left: 20px;
+  border-left-color: white;
+  border-bottom-color: white;
+}
+
+.main .box::after{
+  content: "";
+  position: absolute;
+  right: calc(-100% + 20px);
+  border-right-color: white;
+  border-top-color: white;
+}
+
+.main .box .text{
+  max-width: 500px;
+}
+
+@media (max-width: 768px)
+{
+  .main .box{
+    width: 100%;
+  }
+  .main .box .text{
+    width: 100%;
+  }
+}
+
+.main .box h2{
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.main .box p{
+  font-size: 14px;
+  line-height: 2;
+}
+
+.main .button{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main .button span{
+  display: inline-block;
+  color: transparent;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.main .button span:nth-child(2){
+  background-color: var(--main-color);
+}
