@@ -6,6 +6,7 @@
     -moz-box-sizing: border-box;
 }
 
+
 html{
     scroll-behavior: smooth;
 }
@@ -16,6 +17,8 @@ body{
 
 :root{
   --main-color: #19c8fa;
+  --main-transition: 0.3s;
+  --paragraph-color: #777;
 }
 
 ul{
@@ -26,6 +29,53 @@ a{
   color: inherit;
   cursor:pointer;
   text-decoration: none;
+}
+
+.special-heading{
+  width: fit-content;
+  font-size: 40px;
+  font-weight: normal;
+  margin-inline: auto;
+  margin-block: 80px 65px;
+  text-align: center;
+  position: relative;
+}
+.special-heading::before{
+  content: "";
+  background-color: #000000b3;
+  width: 115px;
+  height: 2px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.special-heading::after{
+  content: "";
+  background-color: white;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #000000b3;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -31px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transition);
+}
+
+.special-heading:hover::after{
+  background-color: var(--main-color);
+}
+
+.special-heading + p{
+  color: var(--paragraph-color);
+  text-align: center;
+  margin: auto;
+  max-width: 530px;
+  margin-bottom: 80px;
+  line-height: 2;
 }
 
 .container{
@@ -220,7 +270,7 @@ a{
   .main .box .text{
     width: 100%;
   }
-   .main .box::after{
+  .main .box::after{
     right: 20px;
   }
 }
@@ -256,4 +306,32 @@ a{
 
 .main .button span:nth-child(2){
   background-color: var(--main-color);
+}
+
+.services{
+  margin-bottom: 70px;
+}
+
+.services-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
+  gap: 60px 40px;
+}
+
+.service-box{
+  display: flex;
+}
+
+.service-box i{
+  margin-right: 50px;
+}
+
+.service-box .text h3{
+  color: var(--main-color);
+  margin-bottom: 40px;
+}
+
+.service-box .text p{
+  color: var(--paragraph-color);
+  line-height: 2;
 }
