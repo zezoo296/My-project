@@ -312,19 +312,36 @@ a{
   margin-bottom: 70px;
 }
 
-.services-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
-  gap: 60px 40px;
-}
 
+
+@media(min-width:768px)
+{
+  .services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 60px 40px;
+  }
+  .service-box i{
+    margin-right: 50px;
+  }
+}
 .service-box{
   display: flex;
 }
 
-.service-box i{
-  margin-right: 50px;
+@media(max-width:768px)
+{
+  .service-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .service-box i{
+    margin-bottom: 50px;
+  }
 }
+
 
 .service-box .text h3{
   color: var(--main-color);
