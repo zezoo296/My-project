@@ -7,9 +7,10 @@
 }
 
 
-html{
+
+/* html{
     scroll-behavior: smooth;
-}
+} */
 
 body{
     font-family: "Open Sans", sans-serif;
@@ -19,7 +20,9 @@ body{
   --main-color: #19c8fa;
   --main-transition: 0.3s;
   --paragraph-color: #777;
+  --section-padding: 70px;
 }
+
 
 ul{
     list-style: none;
@@ -36,7 +39,7 @@ a{
   font-size: 40px;
   font-weight: normal;
   margin-inline: auto;
-  margin-block: 80px 65px;
+  margin-bottom: 65px;
   text-align: center;
   position: relative;
 }
@@ -109,7 +112,7 @@ a{
   position: relative;
 }
 
-.main .overlay{
+.overlay{
   position: absolute;
   top: 0;
   left: 0;
@@ -124,7 +127,6 @@ a{
   justify-content: space-between;
   align-items: center;
   position: relative;
-  right: 0;
   z-index: 2;
 }
 
@@ -309,9 +311,8 @@ a{
 }
 
 .services{
-  margin-bottom: 70px;
+  padding: var(--section-padding);
 }
-
 
 
 @media(min-width:768px)
@@ -351,4 +352,63 @@ a{
 .service-box .text p{
   color: var(--paragraph-color);
   line-height: 2;
+}
+
+.features{
+    height: 600px;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.features .box{
+  position: absolute;
+  width: 50%;
+  background-color: rgb(15 116 143 / 70%);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 60px;
+}
+
+.features .box h2{
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+
+.features .box ul li{
+  margin: 25px;
+  position: relative;
+  letter-spacing: 1.5px;
+}
+
+.features .box ul li i{
+  position: absolute;
+  left: -30px;
+  top: 0px;
+}
+
+.features .container{
+  height: 100%;
+  position: relative;
+}
+
+.features .container img{
+  position: absolute;
+  bottom: -70px;
+  left: 40px;
+}
+
+@media (max-width:768px)
+{
+  .features .container{
+    display: none;
+  }
+  .features .box{
+  width: 100%;
+  }
 }
