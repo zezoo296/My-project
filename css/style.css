@@ -8,9 +8,9 @@
 
 
 
-/* html{
+html{
     scroll-behavior: smooth;
-} */
+}
 
 body{
     font-family: "Open Sans", sans-serif;
@@ -38,6 +38,7 @@ a{
   width: fit-content;
   font-size: 40px;
   font-weight: normal;
+  text-transform: uppercase;
   margin-inline: auto;
   margin-bottom: 65px;
   text-align: center;
@@ -411,4 +412,146 @@ a{
   .features .box{
   width: 100%;
   }
+}
+
+.portfolio{
+  padding: var(--section-padding) 0;
+}
+
+.shuffle ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shuffle ul li{
+  padding: 10px;
+}
+
+
+.shuffle ul li:hover{
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.portfolio .images{
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.portfolio .images .box{
+    overflow: hidden;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+@media (min-width:768px)
+{
+  .portfolio .images .box{
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width:1199px)
+{
+  .portfolio .images .box{
+    flex-basis: 25%;
+  }
+}
+
+
+.portfolio .images img{
+  max-width:100%;
+  transition: var(--main-transition);
+}
+
+.portfolio .images .box:hover img{
+  transform: scale(1.1) rotate(3deg);
+}
+
+.portfolio .images .box .caption{
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  transition: var(--main-transition);
+
+}
+.portfolio .images .box .caption h4{
+  color: var(--main-color);
+}
+.portfolio .images .box .caption p{
+  margin-bottom: 10px;
+}
+
+.portfolio .images .box:hover .caption{
+  bottom: 0;
+}
+
+.portfolio .more{
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.portfolio .more:hover{
+  cursor: pointer;
+}
+
+.video-container{
+  position: relative;
+}
+
+.video-container video{
+  width: 100%;
+}
+
+.video-container .bar{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #146377bb;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+@media(max-width:768px)
+{
+  .video-container .bar{
+    padding: 20px;
+  }
+  .video-container .bar h2{
+    font-size: large;
+    margin-bottom: 10px;
+  }
+  .video-container .bar .more{
+    margin-top: 10px;
+  } 
+}
+
+.video-container .bar h2{
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.video-container .bar .more{
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
 }
