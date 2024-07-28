@@ -355,7 +355,7 @@ a{
   line-height: 2;
 }
 
-.features{
+.design{
     height: 600px;
     background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg);
     background-size: cover;
@@ -364,7 +364,7 @@ a{
 }
 
 
-.features .box{
+.design .box{
   position: absolute;
   width: 50%;
   background-color: rgb(15 116 143 / 70%);
@@ -375,30 +375,30 @@ a{
   padding: 60px;
 }
 
-.features .box h2{
+.design .box h2{
   font-weight: normal;
   margin-bottom: 50px;
 }
 
 
-.features .box ul li{
+.design .box ul li{
   margin: 25px;
   position: relative;
   letter-spacing: 1.5px;
 }
 
-.features .box ul li i{
+.design .box ul li i{
   position: absolute;
   left: -30px;
   top: 0px;
 }
 
-.features .container{
+.design .container{
   height: 100%;
   position: relative;
 }
 
-.features .container img{
+.design .container img{
   position: absolute;
   bottom: -70px;
   left: 40px;
@@ -406,10 +406,10 @@ a{
 
 @media (max-width:768px)
 {
-  .features .container{
+  .design .container{
     display: none;
   }
-  .features .box{
+  .design .box{
   width: 100%;
   }
 }
@@ -832,4 +832,101 @@ a{
 .quote .text p{
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+.pricing{
+  padding-block: var(--section-padding);
+}
+
+.pricing .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pricing .container .box{
+  flex-basis: 100%; 
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+
+
+@media(min-width:600px)
+{
+  .pricing .container .box{
+    flex-basis: 48%;
+  }
+}
+
+@media(min-width:1199px)
+{
+  .pricing .container .box{
+    flex-basis: 23%;
+  }
+}
+
+.pricing .container .box hr{
+  border-top: 1px solid var(--main-color);
+}
+
+.pricing .container .box h3{
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-block: 40px 20px;
+}
+
+.pricing .container .box .value{
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.pricing .container .box .value::before{
+  content: "$";
+  position: relative;
+  font-size: 25px;
+  font-weight: normal;
+  right: 15px;
+  top: -40px;
+}
+
+.pricing .container .box .value::after{
+  content: "/MO";
+  position: relative;
+  font-size: 20px;
+  left: 15px;
+}
+
+.pricing .container .box .features p,
+.pricing .container .box .features hr{
+  margin-block: 15px;
+}
+
+.pricing .container .box .features hr{
+  width: 140px;
+  margin-inline: auto;
+}
+
+.pricing .container .box .confirm a{
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid var(--main-color);
+}
+
+.pricing p:last-of-type{
+  font-size: 20px;
+  text-align: center;
+  margin-block: 40px 20px;
+}
+
+.pricing .contact{
+  background-color: var(--main-color);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 15px 30px;
+  color: white;
 }
