@@ -930,3 +930,78 @@ a{
   padding: 15px 30px;
   color: white;
 }
+
+.mail-form{
+  background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg");
+  background-size: cover;
+  padding-block: 60px;
+  position: relative;
+}
+
+.mail-form .overlay{
+  background-color: rgb(0 0 0 / 30%);
+}
+
+.mail-form .container{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width:991px)
+{
+  .mail-form .container{
+    flex-direction: column;
+  }
+  .mail-form .container p{
+    margin: 30px 0 0;
+  }
+}
+
+.mail-form .container p{
+  color: white;
+  line-height: 2;
+  margin-left: 30px;
+}
+
+.mail-form .container .form{
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  color: white;
+}
+
+.mail-form .container .form i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.mail-form .container .form input[type="email"]{
+  background-color: transparent;
+  border: none;
+  caret-color: var(--main-color);
+  padding-left: 50px;
+  padding-block: 20px;
+  width: calc(100% - 130px);
+  color: white;
+}
+
+.mail-form .container .form input[type="submit"]{
+  width: 130px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.mail-form .container .form input[type="email"]::placeholder{
+  color: white;
+}
+
+.mail-form .container .form input[type="email"]:focus,
+.mail-form .container .form input[type="submit"]:focus{
+  outline: none;
+}
