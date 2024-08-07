@@ -6,7 +6,9 @@
     -moz-box-sizing: border-box;
 }
 
-
+*:focus{
+  outline: none;
+}
 
 html{
     scroll-behavior: smooth;
@@ -1004,4 +1006,115 @@ a{
 .mail-form .container .form input[type="email"]:focus,
 .mail-form .container .form input[type="submit"]:focus{
   outline: none;
+}
+
+.contact{
+  padding-block: var(--section-padding);
+}
+
+.contact .container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media(max-width:991px)
+{
+  .contact .container{
+    flex-direction: column-reverse;
+  }
+  .contact .container .info{
+    text-align: center;
+  }
+}
+
+.contact .container form{
+  position: relative;
+}
+
+.contact .container form input[name="name"],
+.contact .container form input[name="mail"],
+.contact .container form textarea{
+  width: 100%;
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+}
+
+.contact .container form input[type = "submit"]
+{
+  display: flex;
+  margin-left: auto;
+  margin-top: 15px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact .container .info{
+  padding: 10px;
+}
+
+.contact .container .info h4{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.contact .container .info h4:last-of-type{
+  margin: 60px 0 30px
+}
+
+.contact .container .info p{
+  margin-bottom: 10px;
+  color: var(--paragraph-color);
+}
+
+footer{
+  background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg");
+  background-size: cover;
+  padding-block: var(--section-padding);
+  position: relative;
+}
+
+footer .overlay{
+  background-color: rgb(0 0 0 / 70%);
+}
+
+footer .container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+footer .container img,
+footer .container .social
+{
+  margin-bottom: 65px;
+}
+
+footer .container .horizental-line{
+  width: 200px;
+  border-top: 1px solid white;
+  margin-block: 20px;
+}
+
+footer .container h3{
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+
+footer .container .social i{
+  margin-inline: 15px;
+}
+
+footer .container span{
+  color: var(--main-color);
 }
