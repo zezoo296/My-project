@@ -1,1 +1,1 @@
-https://zezoo296.github.io/My-project/
+https://zezoo296.github.io/Template-2/
